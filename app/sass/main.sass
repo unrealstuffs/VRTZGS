@@ -1,0 +1,233 @@
+@import vars
+@import fonts
+@import libs
+
+@keyframes fadeInDown
+	from 
+		opacity: 0
+		transform: translate3d(0, -100%, 0);
+		display: none
+	to 
+		opacity: 1
+		transform: translate3d(0, 0, 0);
+		display: inline-block
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+::-webkit-scrollbar
+	width: 6px
+
+::-webkit-scrollbar-track
+	background-color: transparent
+
+::-webkit-scrollbar-thumb
+	background-color: #cad7d8
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Optima', sans-serif
+	overflow-x: hidden
+	color: $text
+
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $accent
+	padding: 14px 30px
+	font-size: 13px
+	text-transform: uppercase
+	letter-spacing: 3px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accent, 5%)
+	&:active
+		background-color: darken($accent, 5%)
+
+h2, h3, .logo
+	font-family: 'Caveat', sans-serif
+
+.hidden
+	display: none
+
+.top-line
+	position: absolute
+	top: 0
+	width: 100%
+	padding: 19px 0 14px
+	background-color: transparent
+	z-index: 1
+	.logo
+		font-size: 26px
+		float: left
+		color: $light
+		cursor: default
+		user-select: none
+	.social
+		float: right
+		margin-top: 4px
+		a
+			color: $light
+			margin-right: 15px
+			display: inline-block
+			width: 36px
+			height: 36px
+			line-height: 34px
+			text-align: center
+			border: 2px solid transparent
+			border-radius: 10em
+			transition: color .25s ease, border-color .25s ease
+			&:hover
+				color: $accent
+				border-color: $accent
+			&:last-child
+				margin-right: 0
+			@media (max-width: 768px)
+				margin-right: 0
+			i 
+				font-size: 18px
+
+.main-header
+	background-image: url(../img/@2x/background-4.jpg)
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover 
+
+.page-header
+	.top-line
+		position: relative
+		background-color: #cad7d8
+
+	
+.hero-wrap
+	display: inline-block
+	width: 100%
+	margin-top: 80px
+	margin-bottom: 60px
+	position: relative
+	.hero
+		display: block
+		background-color: rgba(#000, .2)
+		padding: 250px 40px 40px
+		@media (max-width: 768px)
+			padding: 150px 40px 40px
+			text-align: center
+		h1 
+			font-size: 41px
+			color: #ffffff
+			margin-bottom: 30px
+			@media (max-width: 768px)
+				font-size: 31px
+
+section
+	padding: 30px 0
+	text-align: center
+	h2 
+		font-size: 36px
+		margin-bottom: 30px
+	form
+		input[type="text"]
+			width: 80%
+			margin-bottom: 30px
+			border: none
+			border-bottom: 1px solid #666666
+			padding: 8px 10px
+			transition: border-color .25s ease, box-shadow .25s ease
+			&:focus
+				border-color: $accent
+				box-shadow: 0 1px 0 0 $accent
+		input[type="submit"]
+			margin: 0 auto
+		.col-md-6:first-child
+			@media (max-width: 768px)
+				margin-bottom: 50px
+			&::after
+				content: '\f004'
+				font-family: 'FontAwesome'
+				position: absolute
+				top: 40%
+				right: -2%
+				color: #f82727
+				@media (max-width: 768px)
+					top: 110%
+					right: 47%
+	
+.form
+	.output
+		margin-top: 30px
+		padding: 20px 0
+		border-top: 1px solid #666
+		width: 90%
+		input
+			color: $accent
+			display: inline-block
+			margin-right: 15px
+			width: 30%
+		.button-small
+			display: inline-block
+			border: none
+			background-color: transparent 
+			color: #888
+			font-size: 16px
+			outline: none
+			.fa
+				margin-right: 10px
+				font-size: 18px
+	.fadeInDown
+		display: inline-block
+		animation: fadeInDown 1s both
+		
+
+.clients
+	.client
+		margin-bottom: 30px
+		cursor: default
+
+footer
+	text-align: center
+	background-color: #cad7d8
+	p 
+		padding: 10px 0
+		margin: 0
+
+#sertificate
+	canvas 
+		margin: 0 auto
+		display: block
+		width: 100%
+		@media (min-width: 992px)
+			width: 50%
+	button
+		margin-top: 30px
+
+body.clients-list
+	position: relative
+	#content
+		min-height: calc(100vh - 50px)
+	footer 
+		position: absolute
+		bottom: 0
+		width: 100%

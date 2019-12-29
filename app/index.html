@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>VRTZGS</title>
+	<meta name="description" content="Первый в мире виртуальный ЗАГС">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/@1x/preview.jpg">
+	
+	<link rel="stylesheet" href="css/styles.min.css">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+
+</head>
+
+<body class="home">
+
+	<header class="main-header lazy-background">
+
+		<nav class="top-line">
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+						<div class="logo">VRTZGS</div>
+					</div>
+					<div class="col-6">
+						<div class="social">
+							<a href="https://vk.com/sad_flex" title="Вконтакте" target="_blank"><i class="fa fa-vk"></i></a>
+							<a href="https://www.instagram.com/sanya__shs/" title="Инстаграм" target="_blank"><i class="fa fa-instagram"></i></a>
+							<a href="https://github.com" title="Репозиторий в GitHub"><i class="fa fa-github" target="_blank"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="hero-wrap">
+			<div class="container">
+				<div class="hero">
+					<h1>Первый в мире виртуальный ЗАГС</h1>
+					<a href="#create" class="button" id="smoothScroll">Создать предложение!</a>
+				</div>
+			</div>
+		</div>
+		
+	</header>
+
+	<section id="create" class="form">
+		<div class="container">
+			<h2>Создайте предложение!</h2>
+			<form id="form">
+				<div class="row">
+					<div class="col-md-6">
+						<input type="text" placeholder="Имя" id="first_name_1" maxlength="15" required>
+						<input type="text" placeholder="Фамилия" id="last_name_1" maxlength="20" required>
+					</div>
+					<div class="col-md-6">
+						<input type="text" placeholder="Имя" id="first_name_2" maxlength="15" required>
+						<input type="text" placeholder="Фамилия" id="last_name_2" maxlength="20" required>
+					</div>
+					<input type="submit" value="Создать!" class="button" id="saveButton">
+				</div>
+			</form>
+			<div id="output" class="output hidden">
+				<input id="output_link" type="text" readonly value="https://github.com/agragregra/OptimizedHTML-5">
+				<button class="button-small" id="copyBtn"><i class="fa fa-copy"></i>Копировать ссылку</button>
+			</div>
+		</div>
+	</section>
+
+	<section class="clients">
+		<h2>База клиентов</h2>
+		<div class="container">
+			<div id="clients" class="row"></div>
+			<a href="clients.html" class="button">Показать всех</a>
+		</div>
+	</section>
+
+	<footer>
+		<p id="footer"><span></span> &copy; Alexander Labchuk</p>
+	</footer>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
